@@ -1,15 +1,21 @@
 //
 //  ViewController.h
-//  ZBarOfDong
+//  PracticeOfZBarSDK
 //
-//  Created by Dong on 15/6/30.
+//  Created by Dong on 15/6/29.
 //  Copyright (c) 2015年 xindong. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
+#import "ZBarSDK.h"
+@interface ViewController : UIViewController<ZBarReaderViewDelegate>
 
-@interface ViewController : UIViewController
+@property (nonatomic, strong) ZBarReaderView *readerView;
+@property (nonatomic, strong) ZBarCameraSimulator *cameraSim;
 
+@property (nonatomic, strong) UILabel *label;
+
+@property (nonatomic, strong) UIButton *button;
 
 @end
 
